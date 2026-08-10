@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slm-splitter"
+version = "0.1.0"
+description = "Phase-only SLM sizing, diffraction simulation, and WGS optimization"
+requires-python = ">=3.8"
+dependencies = [
+  "numpy>=1.21",
+  "scipy>=1.7",
+  "matplotlib>=3.5",
+  "PyYAML>=6.0",
+  "Pillow>=9.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: full-resolution integration tests"]
+asyncio_default_fixture_loop_scope = "function"

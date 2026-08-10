@@ -1,0 +1,46 @@
+# 软件快速验通配置；它不是 1 µm 硬件设计。
+optics:
+  wavelength_nm: 532.0
+  focal_length_mm: 31.0
+  objective_na: 0.10
+  input_profile: gaussian
+  input_beam_radius_mm: null
+
+target:
+  rows: 21
+  columns: 21
+  spot_radius_um: 4.2
+  pitch_um: 100.0
+  max_position_error_um: 3.5
+  radius_definition: 1/e2
+
+slm:
+  pixel_pitch_um: 8.0
+  resolution_x: 512
+  resolution_y: 512
+  fill_factor: 0.95
+  phase_levels: 256
+
+design:
+  fov_margin_spot_radii: 3.0
+  pupil_power_fraction: 0.99
+
+simulation:
+  finite_aperture: true
+  apply_fill_factor: true
+  quantize_phase: true
+  roi_radius_spot_radii: 3.0
+  measurement_oversampling: 2
+  workers: -1
+
+optimization:
+  max_iterations: 60
+  weight_exponent: 1.0
+  cv_tolerance: 0.05
+  min_to_max_power_ratio: 0.90
+  max_relative_power_deviation: 0.10
+  patience: 5
+  seed: 42
+
+output:
+  directory: outputs/strict_quick_demo
