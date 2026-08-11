@@ -14,5 +14,6 @@ pytest -q
 
 详细计算依据和模型说明见：
 
+- [项目目标、验收口径与代码审查指南](docs/project_scope_and_review_guide.md)（建议审查者先读）
 - [SLM 参数选型依据](docs/slm_selection.md)
 - [衍射仿真与相位优化方案](docs/diffraction_simulation.md)
